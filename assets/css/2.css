@@ -93,23 +93,7 @@ div.transbox form {
 
 }
 
-@media screen and (max-width: 480px) {
-    .movImage {
-        width: 300px;
-        height: 300px;
-    }
-    body {
-        background-color: black;
-        background-image: none;
-    }
 
-    .btn-primary {
-        margin-top: 5px;
-    }
-    .ratings {
-        text-align: left;
-    }
-}
 
 .form-control {
     width: 200px;
@@ -127,6 +111,38 @@ div.transbox form {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 12px;
-    margin-bottom:5px;
+    margin-bottom:10px;
     /* text-align: left; */
+}
+
+.col-md-4{
+    text-align: center;
+}
+
+#images{
+    margin-bottom: 25px;
+    background-color: #ffffff;
+}
+
+
+#clicker{}
+
+@media screen and (max-width: 980px) {
+    .movImage {
+        width: 300px;
+        height: 300px;
+    }
+    body {
+        background-color: black;
+        background-image: none;
+    }
+
+    .btn-primary {
+        margin-top: 5px;
+    }
+    .ratings {
+        text-align: center;
+        color: #000;
+        margin-top: 20px;
+    }
 }

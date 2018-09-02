@@ -1,98 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>GIF Homework // Miguel</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Dog Park // jquery homework // Miguel</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
         crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/2.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
 </head>
 
-<body style="padding:20px;">
-    <div id="more"></div>
-    <div id="gifs-appear-here"> </div>
+<body>
+        
 
-    <!-- <button class="btn btn-primary" data-animal="cat">cat</button>
-    <button data-animal="dog">woof</button>
-    <button data-animal="bird">chirp</button> -->
+    <div class="content">
+            <div id="clicker">asdf</div>
+        <div class="content-inside">
+            <div class="container">
+                <h1 class="text-center">Dog Park</h1>
+                <br>
+                <br>
+                <div id="dog-buttons"> </div>
+                <br>
+                <br>
+            </div>
+        </div>
 
-    <script type="text/javascript">
+        <div class="container">
+            <form id="dog-form">
+                <label class="add" for="dog-input">Add a Breed</label>
+                <input type="text" class="form-control" id="dog-input">
+                <br>
+                <br>
+            </form>
+            <button onclick="submitButtonClicked()" type="button" id="add-dog" class="btn btn-primary">ADD BREED</button>
+            <br>
+            <br>
+            <!-- <hr> -->
+            <div id="images"></div>
+        </div>
+        
+    </div>
 
+    <footer class="footer">footer</footer>
 
-
-
-        // $("button").on("click", function () {
-
-        var animalNames = ["cat", "dog", "cow", "horse", "turtle"];
-        function buttons() {
-            for (var i = 0; i < animalNames.length; i++) {
-                document.getElementById("more").innerHTML += "<button class='btn btn-primary' id='" + animalNames[i] + "-button'>" + animalNames[i] + "</button>&nbsp;";
-            }
-        }
-
-        buttons();
-
-
-
-
-        $("button").on("click", function () {
-
-
-            var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + animalNames[i] + "&api_key=dc6zaTOxFJmzC&limit=2";
-            console.log(queryURL);
-
-            // Perfoming an AJAX GET request to our queryURL
-            $.ajax({
-                url: queryURL,
-                method: "GET"
-            })
-                // After data comes back from the request
-                .then(function (response) {
-                    console.log(queryURL);
-
-                    console.log(response);
-                    // storing the data from the AJAX request in the results variable
-                    var results = response.data;
-
-                    // Looping through each result item
-                    for (var i = 0; i < results.length; i++) {
-
-                        // Creating and storing a div tag
-                        var animalDiv = $("<div>");
-
-                        // Creating a paragraph tag with the result item's rating
-                        var p = $("<p>").text("Rating: " + results[i].rating);
-
-                        // Creating and storing an image tag
-                        var animalImage = $("<img>");
-                        // Setting the src attribute of the image to a property pulled off the result item
-                        animalImage.attr("src", results[i].images.fixed_height.url);
-
-                        // Appending the paragraph and image tag to the animalDiv
-                        animalDiv.append(p);
-                        animalDiv.append(animalImage);
-
-                        // Prependng the animalDiv to the HTML page in the "#gifs-appear-here" div
-                        $("#gifs-appear-here").prepend(animalDiv);
-                    }
-
-
-
-
-
-                });
-        });
-
-        // });
-
-    </script>
-
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
+    <script src="assets/js/2.js"></script>
 </body>
 
 </html>
