@@ -1,0 +1,81 @@
+body {
+    background: url("../images/2018-07-23-11.15.50_dark.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    color: white;
+    font-size: 45px;
+    font-weight: 700;
+   
+    
+}
+
+
+
+.container {
+    margin-bottom: 50px;
+    /* background: transparent; 
+
+}
+
+div.transbox {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+
+div.transbox form {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+}
+
+
+
+.btn-primary {
+    margin-left: 10px;
+    background: white;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+
+
+}
+
+@media screen and (max-width: 480px) {
+    .movImage {
+        width: 500px;
+        height: 500px;
+    }
+    body {
+        background-color: black;
+        background-image: none;
+    }
+}
+
+.form-control {
+    width: 200px;
+}
+
+.add {
+    font-size: 20px;
+    color: white;
+}
+
+
+.ratings {
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+    margin-bottom:5px;
+    text-align: center;
+}
