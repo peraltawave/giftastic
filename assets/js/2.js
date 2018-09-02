@@ -20,25 +20,25 @@ function submitButtonClicked() {
     }
 }
 
-function searchGif(gifName) {
+function searchGif(imgName) {
     $.ajax({
-            url: 'https://api.giphy.com/v1/gifs/search?q= ' + gifName + ' &api_key=dc6zaTOxFJmzC',
+            url: 'https://api.giphy.com/v1/gifs/search?q= ' + imgName + ' &api_key=dc6zaTOxFJmzC&limit=9',
             type: 'GET',
         })
         .done(function(response) {
-            displayGif(response);
+            showGif(response);
         })
 }
 
-function displayGif(response) {
+function showGif(response) {
     $('#images').empty();
     for (var i = 0; i < response.data.length; i++) {
         var rating = "<div class='ratings'> Rating:  " + (response.data[i].rating) + " </div>";
         var image = rating + '<img src= " ' + response.data[i].images.fixed_height_still.url +
             '" data-still=" ' + response.data[i].images.fixed_height_still.url +
-            ' " data-animate=" ' + response.data[i].images.fixed_height.url + '" data-state="still" class="movImage" style= "width:300px; height:300px; margin-bottom: 20px; text-align: center;">';
+            ' " data-animate=" ' + response.data[i].images.fixed_height.url + '" data-state="still" class="movImage" style= "width:300px; height:300px; margin-bottom: 20px;">';
 
-        image = '<div class="col-md-4">' + image + "</div>";
+        image = '<div class="col-md-4"><hr>' + image + "</div>";
         $('#images').append(image);
     }
 

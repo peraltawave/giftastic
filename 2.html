@@ -14,28 +14,37 @@
 </head>
 
 <body>
-    <div class="container">
-        <h1 class="text-center">Dog Park</h1>
-        <br>
-        <br>
-        <div id="dog-buttons"> </div>
-        <br>
-        <br>
 
-        <div class="container" id="btn" style="background: transparent;">
+    <div class="content">
+        <div class="content-inside">
+            <div class="container">
+                <h1 class="text-center">Dog Park</h1>
+                <br>
+                <br>
+                <div id="dog-buttons"> </div>
+                <br>
+                <br>
+            </div>
+        </div>
 
+        <div class="container">
             <form id="dog-form">
                 <label class="add" for="dog-input">Add a Breed</label>
                 <input type="text" class="form-control" id="dog-input">
                 <br>
                 <br>
             </form>
-            <button onclick="submitButtonClicked()" type="button" id="add-dog" class="btn btn-primary">Add Breed</button>
+            <button onclick="submitButtonClicked()" type="button" id="add-dog" class="btn btn-primary">ADD BREED</button>
             <br>
             <br>
-            <div id="images"> </div>
+            <!-- <hr> -->
+            <div id="images"></div>
         </div>
+        
     </div>
+
+    <footer class="footer">footer</footer>
+
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
